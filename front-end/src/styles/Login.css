@@ -1,0 +1,298 @@
+.auth-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  font-size: 20px;
+  color: #657786;
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.auth-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #0f1419;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ffcdd2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e6ecf0;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #7371FC;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.submit-btn:hover {
+  background-color: #7371FC;
+}
+
+.switch-auth {
+  margin-top: 20px;
+  color: #657786;
+}
+
+.switch-auth button {
+  background: none;
+  color: #7371FC;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+}
+
+/* Success Screen Styles */
+.success-screen {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* App-style success screen */
+.success-screen.app-style {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+  color: white;
+  border-radius: 16px;
+  margin: -30px;
+  margin-top: -20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.success-screen.app-style::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="90" r="1" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  opacity: 0.3;
+  animation: floatBg 20s linear infinite;
+}
+
+.success-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: successScale 0.8s ease-out;
+}
+
+.bird-icon {
+  font-size: 36px;
+  animation: birdFlap 2s ease-in-out infinite;
+}
+
+.success-content {
+  position: relative;
+  z-index: 1;
+}
+
+.success-screen.app-style h2 {
+  color: white;
+  margin: 20px 0 15px;
+  font-size: 26px;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.success-screen.app-style p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.username-highlight {
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: spin 1s linear infinite;
+}
+
+.success-screen.app-style .success-loader p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
+@keyframes successScale {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes birdFlap {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes floatBg {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-100px) translateY(-100px);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7371FC 0%, #794bc4 100%);
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: successBounce 0.6s ease-out;
+}
+
+.success-screen h2 {
+  color: #0f1419;
+  margin: 20px 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.success-screen p {
+  color: #536471;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.success-loader {
+  margin-top: 30px;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #7371FC;
+  animation: dotPulse 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+.success-loader p {
+  color: #536471;
+  font-size: 14px;
+  margin: 0;
+}
+
+@keyframes successBounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -15px, 0);
+  }
+  70% {
+    transform: translate3d(0, -7px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

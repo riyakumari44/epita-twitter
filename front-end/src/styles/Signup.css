@@ -1,0 +1,171 @@
+.auth-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  font-size: 20px;
+  color: #657786;
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.auth-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #0f1419;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ffcdd2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e6ecf0;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #7371FC;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.submit-btn:hover {
+  background-color: #7371FC;
+}
+
+.switch-auth {
+  margin-top: 20px;
+  color: #657786;
+}
+
+.switch-auth button {
+  background: none;
+  color: #7371FC;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+}
+
+/* Success Screen Styles */
+.success-screen {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00D4AA 0%, #00B894 100%);
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: successBounce 0.6s ease-out;
+}
+
+.success-screen h2 {
+  color: #0f1419;
+  margin: 20px 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.success-screen p {
+  color: #536471;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.success-loader {
+  margin-top: 30px;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #7371FC;
+  animation: dotPulse 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+.success-loader p {
+  color: #536471;
+  font-size: 14px;
+  margin: 0;
+}
+
+@keyframes successBounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -15px, 0);
+  }
+  70% {
+    transform: translate3d(0, -7px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
